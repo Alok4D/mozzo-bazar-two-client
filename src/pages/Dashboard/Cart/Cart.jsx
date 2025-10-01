@@ -1,103 +1,120 @@
-import { FaTrashAlt } from "react-icons/fa";
-import useCart from "../../../hooks/useCart";
-import Swal from "sweetalert2";
-import useAxiosSecure from "../../../hooks/useAxiosSecure";
-import { Link } from "react-router-dom";
 
+
+import { FaTrashAlt } from "react-icons/fa";
+
+import Swal from "sweetalert2";
+
+import { Link } from "react-router-dom";
+import useAxiosSecure from "../../../hooks/useAxiosSecure";
+import useCart from "../../../hooks/useCart";
 
 const Cart = () => {
-    const [cart, refetch] = useCart();
-    const totalPrice = cart.reduce((total, item) => total + item.price, 0);
-    const axiosSecure = useAxiosSecure();
+  const axiosSecure = useAxiosSecure();
+  const [cart, refetch] = useCart();
+  const totalPrice = cart.reduce((total, item) => total + item.price, 0);
 
-    const handleDelete = id => {
-        Swal.fire({
-            title: "Are you sure?",
-            text: "You won't be able to revert this!",
-            icon: "warning",
-            showCancelButton: true,
-            confirmButtonColor: "#3085d6",
-            cancelButtonColor: "#d33",
-            confirmButtonText: "Yes, delete it!"
-        }).then((result) => {
-            if (result.isConfirmed) {
-
-                axiosSecure.delete(`/carts/${id}`)
-                    .then(res => {
-                        if (res.data.deletedCount > 0) {
-                            refetch();
-                            Swal.fire({
-                                title: "Deleted!",
-                                text: "Your file has been deleted.",
-                                icon: "success"
-                            });
-                        }
-                    })
-            }
+  const handleDelete = (id) => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#ff5200",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        axiosSecure.delete(`/carts/${id}`).then((res) => {
+          if (res.data.deletedCount > 0) {
+            refetch();
+            Swal.fire({
+              title: "Deleted!",
+              text: "Item has been removed from your cart.",
+              icon: "success",
+              confirmButtonColor: "#ff5200",
+            });
+          }
         });
-    }
+      }
+    });
+  };
 
-    return (
-        <div>
-            <div className="flex justify-evenly mb-8">
-                <h2 className="text-4xl">Items: {cart.length}</h2>
-                <h2 className="text-4xl">Total Price: {totalPrice}</h2>
-                {cart.length ? <Link to="/dashboard/payment">
-                    <button className="btn btn-primary">Pay</button>
-                </Link>:
-                <button disabled className="btn btn-primary">Pay</button>
-                }
+  return (
+    <div className="p-6 md:p-10 bg-gray-50 min-h-screen">
+      {/* Header */}
+      <div className="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-800">
+          🛒 Items in Cart: <span className="text-[#ff5200]">{cart.length}</span>
+        </h2>
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-800">
+          💰 Total Price: <span className="text-[#ff5200]">${totalPrice.toFixed(2)}</span>
+        </h2>
 
-            </div>
-            <div className="overflow-x-auto">
-                <table className="table  w-full">
-                    {/* head */}
-                    <thead>
-                        <tr>
-                            <th>
-                                #
-                            </th>
-                            <th>Image</th>
-                            <th>Name</th>
-                            <th>Price</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {
-                            cart.map((item, index) => <tr key={item._id}>
-                                <th>
-                                    {index + 1}
-                                </th>
-                                <td>
-                                    <div className="flex items-center gap-3">
-                                        <div className="avatar">
-                                            <div className="mask mask-squircle w-12 h-12">
-                                                <img src={item.image} alt="Avatar Tailwind CSS Component" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    {item.name}
-                                </td>
-                                <td>${item.price}</td>
-                                <th>
-                                    <button
-                                        onClick={() => handleDelete(item._id)}
-                                        className="btn btn-ghost btn-lg">
-                                        <FaTrashAlt className="text-red-600"></FaTrashAlt>
-                                    </button>
-                                </th>
-                            </tr>)
-                        }
+        {cart.length ? (
+          <Link to="/dashboard/payment">
+            <button className="px-6 py-2 rounded-lg bg-[#ff5200] text-white font-semibold shadow-md hover:bg-orange-600 transition duration-300">
+              Pay Now
+            </button>
+          </Link>
+        ) : (
+          <button
+            disabled
+            className="px-6 py-2 rounded-lg bg-gray-300 text-white font-semibold shadow-md cursor-not-allowed"
+          >
+            Pay Now
+          </button>
+        )}
+      </div>
 
+      {/* Table */}
+      <div className="overflow-x-auto bg-white rounded-xl shadow-lg">
+        <table className="min-w-full divide-y divide-gray-200 text-sm text-gray-700">
+          <thead className="bg-[#ff5200] text-white">
+            <tr>
+              <th className="px-4 py-3 text-left">#</th>
+              <th className="px-4 py-3 text-left">Image</th>
+              <th className="px-4 py-3 text-left">Name</th>
+              <th className="px-4 py-3 text-left">Price</th>
+              <th className="px-4 py-3 text-left">Action</th>
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-gray-200">
+            {cart.map((item, index) => (
+              <tr key={item._id} className="hover:bg-gray-50 transition">
+                <td className="px-4 py-4">{index + 1}</td>
+                <td className="px-4 py-4">
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    className="h-12 w-12 rounded-lg object-cover shadow-md"
+                  />
+                </td>
+                <td className="px-4 py-4 font-medium">{item.name}</td>
+                <td className="px-4 py-4 text-[#ff5200] font-semibold">
+                  ${item.price.toFixed(2)}
+                </td>
+                <td className="px-4 py-4">
+                  <button
+                    onClick={() => handleDelete(item._id)}
+                    className="text-red-500 hover:text-red-700 transition"
+                  >
+                    <FaTrashAlt size={18} />
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
 
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    );
+        {/* No items message */}
+        {cart.length === 0 && (
+          <div className="text-center py-12 text-gray-500 text-lg font-medium">
+            Your cart is empty 🛒
+          </div>
+        )}
+      </div>
+    </div>
+  );
 };
 
 export default Cart;

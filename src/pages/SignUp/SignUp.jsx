@@ -166,7 +166,7 @@ const SignUp = () => {
   return (
     <>
       <Helmet>
-        <title>Bistro Boss | Sign Up</title>
+        <title>Mozzo Bazar | Sign Up</title>
       </Helmet>
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-purple-200 via-pink-100 to-blue-100 px-4">
         <div className="card w-full max-w-md shadow-2xl bg-white/90 backdrop-blur-md border border-gray-200 rounded-2xl">

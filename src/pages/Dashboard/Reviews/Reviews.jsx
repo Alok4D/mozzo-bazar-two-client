@@ -1,8 +1,10 @@
 import { useState } from "react";
 import toast from "react-hot-toast";
 import SectionTitle from "../../../components/SectionTitle/SectionTitle";
+import useAuth from "../../../hooks/useAuth";
 
 const Reviews = () => {
+  const { user } = useAuth(); // user auth থেকে email নেওয়া হচ্ছে
   const [rating, setRating] = useState(0);
   const [hoverRating, setHoverRating] = useState(0);
 
@@ -43,6 +45,7 @@ const Reviews = () => {
 
     const form = e.target;
     const reviewData = {
+      email: user?.email, // auth থেকে email
       rating,
       recipe: form.recipe.value,
       suggestion: form.suggestion.value,
@@ -51,11 +54,14 @@ const Reviews = () => {
     };
 
     try {
-      const response = await fetch("https://mozzo-bazar-two-server.vercel.app/reviews", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(reviewData),
-      });
+      const response = await fetch(
+        "https://mozzo-bazar-two-server.vercel.app/reviews",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(reviewData),
+        }
+      );
 
       if (response.ok) {
         toast.success("✅ Thank you for your review!");
@@ -85,7 +91,10 @@ const Reviews = () => {
 
         <form onSubmit={handleSubmit} className="space-y-8">
           <div>
-            <label htmlFor="recipe" className="block mb-2 text-lg font-medium text-[#6b5847]">
+            <label
+              htmlFor="recipe"
+              className="block mb-2 text-lg font-medium text-[#6b5847]"
+            >
               Which recipe did you like most?
             </label>
             <input
@@ -99,7 +108,10 @@ const Reviews = () => {
           </div>
 
           <div>
-            <label htmlFor="suggestion" className="block mb-2 text-lg font-medium text-[#6b5847]">
+            <label
+              htmlFor="suggestion"
+              className="block mb-2 text-lg font-medium text-[#6b5847]"
+            >
               Do you have any suggestions for us?
             </label>
             <input
@@ -112,7 +124,10 @@ const Reviews = () => {
           </div>
 
           <div>
-            <label htmlFor="review" className="block mb-2 text-lg font-medium text-[#6b5847]">
+            <label
+              htmlFor="review"
+              className="block mb-2 text-lg font-medium text-[#6b5847]"
+            >
               Kindly express your thoughts in a short way.
             </label>
             <textarea

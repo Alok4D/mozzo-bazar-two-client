@@ -156,7 +156,7 @@ const Login = () => {
   return (
     <>
       <Helmet>
-        <title>Bistro Boss | Login</title>
+        <title>Mozzo Bazar | Login</title>
       </Helmet>
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#fdf6e3] via-[#f8e9d2] to-[#e6cf9f] px-4">
         <div className="w-full max-w-5xl bg-white shadow-2xl rounded-2xl overflow-hidden flex flex-col md:flex-row">
