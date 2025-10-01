@@ -102,13 +102,7 @@
 // };
 
 // export default Login;
-
-import { useContext, useEffect, useState } from "react";
-import {
-  loadCaptchaEnginge,
-  LoadCanvasTemplate,
-  validateCaptcha,
-} from "react-simple-captcha";
+import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
@@ -116,8 +110,6 @@ import Swal from "sweetalert2";
 import SocialLogin from "../../components/SocialLogin/SocialLogin";
 
 const Login = () => {
-
-  const [disabled, setDisabled] = useState(true);
   const { signIn } = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
@@ -125,32 +117,30 @@ const Login = () => {
   const from = location.state?.from?.pathname || "/";
   console.log("state in the location login page", location.state);
 
-  useEffect(() => {
-    loadCaptchaEnginge(6);
-  }, []);
-
   const handleLogin = (event) => {
-    
     event.preventDefault();
     const form = event.target;
     const email = form.email.value;
     const password = form.password.value;
 
-    signIn(email, password).then((result) => {
-      const user = result?.user;
-      Swal.fire({
-        title: "✅ Login Successful!",
-        icon: "success",
-        timer: 2000,
-        showConfirmButton: false,
+    signIn(email, password)
+      .then((result) => {
+        Swal.fire({
+          title: "✅ Login Successful!",
+          icon: "success",
+          timer: 2000,
+          showConfirmButton: false,
+        });
+        navigate(from, { replace: true });
+      })
+      .catch((error) => {
+        console.error(error);
+        Swal.fire({
+          title: "❌ Login Failed",
+          text: error.message,
+          icon: "error",
+        });
       });
-      navigate(from, { replace: true });
-    });
-  };
-
-  const handleValidateCaptcha = (e) => {
-    const user_captcha_value = e.target.value;
-    setDisabled(!validateCaptcha(user_captcha_value));
   };
 
   return (
@@ -211,42 +201,16 @@ const Login = () => {
                   required
                 />
                 <div className="text-right mt-2">
-                  <a
-                    href="#"
-                    className="text-sm text-[#ff5200] hover:underline"
-                  >
+                  <a href="#" className="text-sm text-[#ff5200] hover:underline">
                     Forgot password?
                   </a>
                 </div>
               </div>
 
-              {/* Captcha */}
-              <div>
-                <label className="block mb-2 text-gray-700 font-medium">
-                  Security Check
-                </label>
-                <div className="flex items-center gap-3">
-                  <LoadCanvasTemplate />
-                </div>
-                <input
-                  onBlur={handleValidateCaptcha}
-                  type="text"
-                  name="captcha"
-                  placeholder="Enter captcha"
-                  className="w-full mt-3 px-4 py-3 border rounded-lg focus:ring-2 focus:ring-[#ff9900] outline-none bg-gray-50"
-                  required
-                />
-              </div>
-
               {/* Submit Button */}
               <button
                 type="submit"
-                disabled={disabled}
-                className={`w-full py-3 rounded-lg text-lg font-semibold transition duration-300 ${
-                  disabled
-                    ? "bg-gray-400 cursor-not-allowed"
-                    : "bg-[#ff5200] hover:bg-orange-600 text-white"
-                }`}
+                className="w-full py-3 rounded-lg text-lg font-semibold transition duration-300 bg-[#ff5200] hover:bg-orange-600 text-white"
               >
                 Login
               </button>
