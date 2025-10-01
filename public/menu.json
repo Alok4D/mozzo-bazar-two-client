@@ -1,0 +1,352 @@
+[
+  {
+    "name": "Beet & Goat Cheese Salad",
+    "category": "popular",
+    "price": 66,
+    "recipe": "Roasted beets paired with creamy goat cheese, arugula, walnuts, and a …",
+    "image": "https://i.ibb.co/LdXyYWZm/roasted-beetroot-goats-cheese-salad-f5615c2.…"
+  },
+  {
+    "name": "Quinoa Avocado Salad",
+    "category": "salad",
+    "price": 65,
+    "recipe": "A refreshing salad made with quinoa, avocado, cherry tomatoes, cucumbe…",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/ca…"
+  },
+  {
+    "name": "Mediterranean Orzo Salad",
+    "category": "salad",
+    "price": 62,
+    "recipe": "Orzo pasta tossed with cherry tomatoes, cucumbers, olives, red onion, …",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKYe30Rh2Y20UUDq…"
+  },
+  {
+    "name": "Chickpea Cucumber Salad",
+    "category": "salad",
+    "price": 48,
+    "recipe": "Protein-packed chickpeas mixed with cucumbers, red onion, parsley, and…",
+    "image": "https://ccstable.com/wp-content/uploads/2024/03/cucumber-salad-feta-ga…"
+  },
+  {
+    "name": "Green Salad Recipes",
+    "category": "salad",
+    "price": 60,
+    "recipe": "The Garden Salad - RecipeTin Eats. A salad is a dish of mixed ingredie…",
+    "image": "https://i.ibb.co/qFYjbZb6/Margherita-Pizza-EXPS-TOHVP24-275515-MF-02-2…"
+  },
+  {
+    "name": "Greek Salad",
+    "category": "salad",
+    "price": 55,
+    "recipe": "Fresh cucumbers, tomatoes, red onions, Kalamata olives, and feta chees…",
+    "image": "https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2018/08/Gr…"
+  },
+  {
+    "name": "Caesar Salad",
+    "category": "salad",
+    "price": 50,
+    "recipe": "Crisp romaine lettuce with creamy Caesar dressing, Parmesan, croutons,…",
+    "image": "https://www.allrecipes.com/thmb/mXZ0Tulwn3x9_YB_ZbkiTveDYFE=/1500x0/fi…"
+  },
+  {
+    "name": "Asian Slaw Salad",
+    "category": "salad",
+    "price": 53,
+    "recipe": "A crunchy combo of cabbage, carrots, green onions with sesame-soy dres…",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS29LOs4BU9SP8UZf…"
+  },
+  {
+    "name": "Spinach Strawberry Salad",
+    "category": "salad",
+    "price": 58,
+    "recipe": "Tender spinach leaves with sliced strawberries, walnuts, and balsamic …",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRISVEoopv3g2FX1v…"
+  },
+  {
+    "name": "Caprese Salad",
+    "category": "salad",
+    "price": 45,
+    "recipe": "Sliced fresh mozzarella, tomatoes, and basil, seasoned with salt, oliv…",
+    "image": "https://hips.hearstapps.com/hmg-prod/images/caprese-salad-recipe-2-664…"
+  },
+  {
+    "name": "BBQ Chicken Pizza",
+    "category": "pizza",
+    "price": 95,
+    "recipe": "Tangy BBQ sauce, grilled chicken, red onions, mozzarella, and cilantro…",
+    "image": "https://www.allrecipes.com/thmb/qZ7LKGV1_RYDCgYGSgfMn40nmks=/1500x0/fi…"
+  },
+  {
+    "name": "Tandoori Chicken Pizza",
+    "category": "pizza",
+    "price": 98,
+    "recipe": "Indian-inspired flavors with tandoori chicken, onions, and mint yogurt…",
+    "image": "https://thefoodiephysician.com/wp-content/uploads/2012/06/tandoori-chi…"
+  },
+  {
+    "name": "Spinach Alfredo Pizza",
+    "category": "pizza",
+    "price": 92,
+    "recipe": "Creamy Alfredo sauce, spinach, garlic, and mozzarella on a crispy crus…",
+    "image": "https://thechaotictable.com/wp-content/uploads/2025/04/Spinach-Articho…"
+  },
+  {
+    "name": "Buffalo Chicken Pizza",
+    "category": "popular",
+    "price": 95,
+    "recipe": "Spicy buffalo sauce, grilled chicken, red onion, and ranch drizzle.",
+    "image": "https://hips.hearstapps.com/hmg-prod/images/190226-buffalo-chicken-piz…"
+  },
+  {
+    "name": "Pepperoni Pizza",
+    "category": "pizza",
+    "price": 85,
+    "recipe": "Spicy pepperoni slices, mozzarella cheese, and rich tomato sauce on a …",
+    "image": "https://i0.wp.com/www.amysrecipebook.com/wp-content/uploads/2021/01/pe…"
+  },
+  {
+    "name": "Hawaiian Pizza",
+    "category": "popular",
+    "price": 88,
+    "recipe": "Sweet pineapple chunks and savory ham with mozzarella on a tomato base…",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf6CqNEU3rr0yFP9…"
+  },
+  {
+    "name": "Four Cheese Pizza",
+    "category": "pizza",
+    "price": 90,
+    "recipe": "A cheesy delight with mozzarella, cheddar, parmesan, and blue cheese.",
+    "image": "https://marleyspoon.com/media/recipes/479583/main_photos/large/tray_ba…"
+  },
+  {
+    "name": "Meat Lovers Pizza",
+    "category": "pizza",
+    "price": 100,
+    "recipe": "Loaded with pepperoni, sausage, ham, bacon, and beef for carnivores.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsXQWzHYnGYQ1iPN…"
+  },
+  {
+    "name": "Margherita Pizza",
+    "category": "pizza",
+    "price": 75,
+    "recipe": "Classic Margherita with tomato sauce, mozzarella cheese, and fresh bas…",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV28ysrL6AZItZIm…"
+  },
+  {
+    "name": "Veggie Supreme Pizza",
+    "category": "pizza",
+    "price": 80,
+    "recipe": "Topped with bell peppers, onions, mushrooms, olives, and tomatoes with…",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROfu_zYjFrbzQ0is…"
+  },
+  {
+    "name": "Tomato Basil Soup",
+    "category": "popular",
+    "price": 45,
+    "recipe": "Creamy tomato soup with fresh basil, garlic, and a hint of olive oil.",
+    "image": "https://www.happyfoodstube.com/wp-content/uploads/2020/03/creamy-tomat…"
+  },
+  {
+    "name": "Mushroom Cream Soup",
+    "category": "soup",
+    "price": 60,
+    "recipe": "Rich and creamy soup made with fresh mushrooms, cream, and herbs.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg3TFtbjeoWwwFWp…"
+  },
+  {
+    "name": "Minestrone Soup",
+    "category": "offered",
+    "price": 48,
+    "recipe": "Hearty Italian vegetable soup with beans, pasta, and tomatoes.",
+    "image": "https://www.restaurantreciperecreations.com/wp-content/uploads/2022/04…"
+  },
+  {
+    "name": "Lentil Soup",
+    "category": "soup",
+    "price": 42,
+    "recipe": "Healthy lentil soup with carrots, onions, and a mix of warm spices.",
+    "image": "https://www.noracooks.com/wp-content/uploads/2018/11/square-1.jpg"
+  },
+  {
+    "name": "Hot and Sour Soup",
+    "category": "soup",
+    "price": 52,
+    "recipe": "Classic Chinese soup with mushrooms, tofu, bamboo shoots, and spicy vi…",
+    "image": "https://www.allrecipes.com/thmb/u5o_m5wGM-LR0nR3oFoxIS7iGJs=/1500x0/fi…"
+  },
+  {
+    "name": "Thai Coconut Soup",
+    "category": "offered",
+    "price": 65,
+    "recipe": "Spicy and creamy soup with coconut milk, lemongrass, mushrooms, and ch…",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq6BkZ_Bx0IxtmZg…"
+  },
+  {
+    "name": "Broccoli Cheddar Soup",
+    "category": "soup",
+    "price": 58,
+    "recipe": "Thick soup made with fresh broccoli and creamy cheddar cheese.",
+    "image": "https://www.simplyrecipes.com/thmb/9ZFvXlylDaEgR_1LJTuQQnZCC5M=/1500x0…"
+  },
+  {
+    "name": "Chicken Noodle Soup",
+    "category": "soup",
+    "price": 50,
+    "recipe": "Classic chicken broth with shredded chicken, egg noodles, carrots, and…",
+    "image": "https://www.campbells.com/wp-content/uploads/2021/09/F21-Condensed-Eat…"
+  },
+  {
+    "name": "French Onion Soup",
+    "category": "soup",
+    "price": 55,
+    "recipe": "Caramelized onions in beef broth, topped with crusty bread and melted …",
+    "image": "https://www.familyfoodonthetable.com/wp-content/uploads/2025/01/French…"
+  },
+  {
+    "name": "Clam Chowder",
+    "category": "soup",
+    "price": 70,
+    "recipe": "Creamy New England-style chowder with clams, potatoes, and celery.",
+    "image": "https://www.savingdessert.com/wp-content/uploads/2012/02/New-England-C…"
+  },
+  {
+    "name": "Lemon Tart",
+    "category": "dessert",
+    "price": 60,
+    "recipe": "Tangy lemon custard in a buttery tart shell, topped with powdered suga…",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLe0TH24zvC3ee0G…"
+  },
+  {
+    "name": "Chocolate Mousse",
+    "category": "popular",
+    "price": 62,
+    "recipe": "Light and airy chocolate mousse made with dark chocolate and whipped c…",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkE8J2oiQZdeMQhb…"
+  },
+  {
+    "name": "Red Velvet Cake",
+    "category": "offered",
+    "price": 72,
+    "recipe": "Moist red velvet cake layered with rich cream cheese frosting.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxMFJhI4rLDQNg4O…"
+  },
+  {
+    "name": "Chocolate Lava Cake",
+    "category": "dessert",
+    "price": 65,
+    "recipe": "Warm, rich chocolate cake with a gooey molten center, served with vani…",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJYg-bd41gp07DGU…"
+  },
+  {
+    "name": "Classic Tiramisu",
+    "category": "dessert",
+    "price": 75,
+    "recipe": "Italian dessert with layers of coffee-soaked ladyfingers and mascarpon…",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAiXYrVVskpU9gwu…"
+  },
+  {
+    "name": "Strawberry Cheesecake",
+    "category": "offered",
+    "price": 70,
+    "recipe": "Creamy cheesecake topped with a fresh strawberry glaze and berries.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7plOLBRegNcv9Fj…"
+  },
+  {
+    "name": "Apple Pie",
+    "category": "dessert",
+    "price": 55,
+    "recipe": "Classic American pie with spiced apple filling and a flaky golden crus…",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShGvV_1zfnQCiMnj…"
+  },
+  {
+    "name": "Crème Brûlée",
+    "category": "popular",
+    "price": 68,
+    "recipe": "Rich vanilla custard topped with a crisp layer of caramelized sugar.",
+    "image": "https://barefeetinthekitchen.com/wp-content/uploads/2025/04/Creme-Brul…"
+  },
+  {
+    "name": "Panna Cotta",
+    "category": "dessert",
+    "price": 58,
+    "recipe": "Silky-smooth Italian dessert made with sweetened cream and vanilla.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwErMb_bvzt3Wgrm…"
+  },
+  {
+    "name": "Mango Sticky Rice",
+    "category": "dessert",
+    "price": 64,
+    "recipe": "Sweet Thai dessert made with glutinous rice, coconut milk, and ripe ma…",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLpBzOvpeQYdle3E…"
+  },
+  {
+    "name": "Fresh Orange Juice",
+    "category": "offered",
+    "price": 40,
+    "recipe": "Freshly squeezed orange juice served chilled with no added sugar.",
+    "image": "https://media.istockphoto.com/id/1400831765/photo/yellow-orange-fruits…"
+  },
+  {
+    "name": "Iced Caramel Macchiato",
+    "category": "popular",
+    "price": 55,
+    "recipe": "Chilled espresso blended with milk and vanilla syrup, topped with cara…",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6apH5sU2u22VjAt…"
+  },
+  {
+    "name": "Classic Mojito",
+    "category": "offered",
+    "price": 60,
+    "recipe": "Refreshing mint and lime mocktail with soda water and crushed ice.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN2lb6TpWmTq5d6j…"
+  },
+  {
+    "name": "Coconut Water",
+    "category": "popular",
+    "price": 35,
+    "recipe": "Natural coconut water served chilled with bits of tender coconut.",
+    "image": "https://img.freepik.com/premium-photo/fruits-table-beach_1048944-20230…"
+  },
+  {
+    "name": "Blueberry Milkshake",
+    "category": "popular",
+    "price": 70,
+    "recipe": "Creamy milkshake blended with fresh blueberries and vanilla ice cream.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcST8R7z8v6g5RzKpm…"
+  },
+  {
+    "name": "Strawberry Smoothie",
+    "category": "drinks",
+    "price": 58,
+    "recipe": "Blended strawberries, yogurt, and honey for a creamy fruity treat.",
+    "image": "https://www.knowyourproduce.com/wp-content/uploads/2018/01/strawberry-…"
+  },
+  {
+    "name": "Lemon Iced Tea",
+    "category": "drinks",
+    "price": 42,
+    "recipe": "Chilled black tea infused with lemon juice and a hint of honey.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJAlwSaIh7fUD8R-…"
+  },
+  {
+    "name": "Matcha Green Tea Latte",
+    "category": "drinks",
+    "price": 65,
+    "recipe": "Japanese matcha green tea blended with steamed milk and a touch of swe…",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuOdh52PFhpPHEjz…"
+  },
+  {
+    "name": "Cold Brew Coffee",
+    "category": "drinks",
+    "price": 50,
+    "recipe": "Slow-steeped cold brew coffee, smooth and less acidic than hot brews.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkP2h1edPO_f266L…"
+  },
+  {
+    "name": "Virgin Pina Colada",
+    "category": "drinks",
+    "price": 655,
+    "recipe": "Tropical blend of pineapple juice and coconut milk over crushed ice.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6YrwXzszbjYY78a…"
+  }
+]
