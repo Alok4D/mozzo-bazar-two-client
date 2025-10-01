@@ -6,23 +6,54 @@ The design is inspired by **Figma**, featuring an elegant UI for browsing menus,
 ---
 
 ## 🚀 Features
-- 🏠 **Responsive UI** – Mobile-first, works across all devices.
-- 📋 **Menu Display** – Browse categorized food items with images, prices, and details.
-- 🛒 **Cart System** – Add/remove items and manage cart in real time.
-- 📅 **Reservation UI** – User-friendly reservation form.
-- ⭐ **Wishlist** – Save favorite items for later (UI only).
-- 🌗 **Dark/Light Mode** – Smooth theme toggle with persistence.
-- 🔐 **Authentication (UI)** – Login/Register pages integrated with Firebase (optional).
+- 🏠 **Responsive UI** – Mobile-first, works across all devices  
+- 📋 **Menu Display** – Browse categorized food items with images, prices, and details  
+- 🛒 **Cart System** – Add/remove items and manage cart in real time  
+- 📅 **Reservation UI** – User-friendly reservation form  
+- ⭐ **Wishlist** – Save favorite items for later (UI only)  
+- 🌗 **Dark/Light Mode** – Smooth theme toggle with persistence  
+- 🔐 **Authentication** – Login/Register pages integrated with Firebase (optional)  
+- 👥 **Role Management** – Separate dashboards for **User** and **Admin**  
+
+---
+
+## 👥 Role Management
+
+Mozzo Bazar has **two types of roles** in the web application:
+
+### 🔹 1. User Role
+- Browse menu & add items to cart  
+- View and manage personal cart  
+- View payment history  
+- Post reviews  
+- Access **User Dashboard**  
+
+👉 **Demo Login (User):**  
+Email: `mozzouser@gmail.com`  
+Password: `@MozzoUser1`  
+
+---
+
+### 🔹 2. Admin Role
+- Full access to **Admin Dashboard**  
+- Add new items  
+- Manage/edit/delete menu items  
+- View all users and manage their roles  
+- Track orders and system overview  
+
+👉 **Demo Login (Admin):**  
+Email: `mozzoadmin@gmail.com`  
+Password: `@MozzoAdmin1`  
 
 ---
 
 ## 🛠️ Tech Stack
-- **Framework:** React (Vite)
-- **Styling:** Tailwind CSS, DaisyUI
-- **Routing:** React Router DOM
-- **State Management:** React Context / useState
-- **Animations:** Framer Motion (optional)
-- **Deployment:** Vercel / Netlify
+- **Framework:** React (Vite)  
+- **Styling:** Tailwind CSS, DaisyUI  
+- **Routing:** React Router DOM  
+- **State Management:** React Context / useState  
+- **Animations:** Framer Motion (optional)  
+- **Deployment:** Vercel / Netlify  
 
 ---
 
@@ -50,7 +81,7 @@ mozzo-bazar/
 ## ⚡ Installation & Setup
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/Alok4D/bistro-boss-client
+   git clone https://github.com/Alok4D/mozzo-bazar-two-client
    cd mozzo-bazar
    ```
 
@@ -70,19 +101,6 @@ mozzo-bazar/
    ```bash
    npm run dev
    ```
-
----
-
-## 📸 Screenshots
-
-### 🏠 Home Page
-![Home Page](./screenshots/home.png)
-
-### 📋 Menu Page
-![Menu Page](./screenshots/menu.png)
-
-### 🛒 Cart Page
-![Cart Page](./screenshots/cart.png)
 
 ---
 
