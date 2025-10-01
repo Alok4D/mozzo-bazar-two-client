@@ -15,7 +15,7 @@ const Testimonials = () => {
   const { data: reviews = [], isLoading, error } = useQuery({
     queryKey: ["reviews"],
     queryFn: async () => {
-      const res = await axiosSecure.get("http://localhost:8000/reviews");
+      const res = await axiosSecure.get("https://mozzo-bazar-two-server.vercel.app/reviews");
       return res.data;
     },
   });

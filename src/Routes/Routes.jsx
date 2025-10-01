@@ -97,7 +97,7 @@ import Contact from "../components/Contact/Contact";
         {
           path: 'updateItem/:id',
           element: <AdminRoute><UpdateItem></UpdateItem></AdminRoute>,
-          loader: ({params}) => fetch(`http://localhost:8000/menu/${params.id}`)
+          loader: ({params}) => fetch(`https://mozzo-bazar-two-server.vercel.app/menu/${params.id}`)
         },
         {
           path: 'users',
