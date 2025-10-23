@@ -21,7 +21,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:8000/contacts", formData);
+      const res = await axios.post("https://mozzo-bazar-two-server.vercel.app/contacts", formData);
       if (res.data.success) {
         toast.success("✅ Your message has been sent successfully!", {
           position: "top-center",
