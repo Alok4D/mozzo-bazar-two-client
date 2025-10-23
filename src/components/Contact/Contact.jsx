@@ -2,18 +2,17 @@ import { useState } from "react";
 import Cover from "../../pages/Shared/Cover/Cover";
 import telephone from "../../../src/assets/home/tele-removebg-preview.png";
 import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
-    company: "",
     email: "",
     phone: "",
     subject: "",
     message: "",
   });
-
-  const [successMsg, setSuccessMsg] = useState("");
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -24,19 +23,29 @@ const Contact = () => {
     try {
       const res = await axios.post("http://localhost:8000/contacts", formData);
       if (res.data.success) {
-        setSuccessMsg("Your message has been sent successfully!");
+        toast.success("✅ Your message has been sent successfully!", {
+          position: "top-center",
+          autoClose: 3000,
+        });
         setFormData({
           name: "",
-          company: "",
           email: "",
           phone: "",
           subject: "",
           message: "",
         });
+      } else {
+        toast.error("❌ Something went wrong. Please try again.", {
+          position: "top-center",
+          autoClose: 3000,
+        });
       }
     } catch (err) {
       console.error(err);
-      setSuccessMsg("Something went wrong. Please try again.");
+      toast.error("❌ Something went wrong. Please try again.", {
+        position: "top-center",
+        autoClose: 3000,
+      });
     }
   };
 
@@ -49,13 +58,13 @@ const Contact = () => {
 
       <div className="bg-gradient-to-b from-[#fff1f2] via-[#fff9f2] to-white py-20 px-6">
         <div className="container mx-auto text-center">
-          <img src={telephone} alt="Old phone" className="mx-auto" />
+          <img src={telephone} alt="Old phone" className="mx-auto mb-6" />
           <h1 className="text-4xl md:text-5xl font-extrabold text-[#ff5200] mb-4 tracking-tight">
             HELLO
           </h1>
           <p className="text-base md:text-lg text-gray-700 sm:w-auto md:w-auto lg:w-[70%] mx-auto mb-12 leading-relaxed">
-            You&apos;ve got some Q&apos;s and we&apos;ve got tons of A&apos;s. Ask
-            us about an order, a product, or anything we can help with!
+            You&apos;ve got some questions and we&apos;ve got answers. Ask us
+            about an order, a product, or anything we can help with!
           </p>
 
           {/* Contact Section */}
@@ -72,14 +81,11 @@ const Contact = () => {
 
             {/* Right Section - Form */}
             <div className="md:w-1/2 p-10 md:p-14 bg-white flex flex-col justify-center">
-              {successMsg && (
-                <p className="mb-4 text-green-600 font-semibold">{successMsg}</p>
-              )}
               <form className="grid grid-cols-1 gap-6" onSubmit={handleSubmit}>
-                {["name", "company", "email", "phone", "subject"].map((field) => (
+                {["name", "email", "phone", "subject"].map((field) => (
                   <div key={field} className="flex flex-col text-start gap-2">
                     <label className="text-sm font-medium text-gray-700 capitalize">
-                      {field}
+                      {field}{" "}
                       {["name", "email", "subject"].includes(field) && "*"}
                     </label>
                     <input
@@ -88,21 +94,23 @@ const Contact = () => {
                       placeholder={`Enter your ${field}`}
                       value={formData[field]}
                       onChange={handleChange}
-                      className="p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#ff5200] shadow-sm"
+                      className="p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#ff5200] shadow-sm transition duration-300 hover:border-[#ff5200]"
                       required={["name", "email", "subject"].includes(field)}
                     />
                   </div>
                 ))}
 
                 <div className="flex flex-col text-start gap-2">
-                  <label className="text-sm font-medium text-gray-700">Message</label>
+                  <label className="text-sm font-medium text-gray-700">
+                    Message
+                  </label>
                   <textarea
-                    rows="4"
+                    rows="5"
                     name="message"
                     placeholder="Type your message..."
                     value={formData.message}
                     onChange={handleChange}
-                    className="p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#ff5200] shadow-sm"
+                    className="p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#ff5200] shadow-sm transition duration-300 hover:border-[#ff5200]"
                   ></textarea>
                 </div>
 
@@ -119,6 +127,9 @@ const Contact = () => {
           </section>
         </div>
       </div>
+
+      {/* Toast Notifications */}
+      <ToastContainer />
     </div>
   );
 };
