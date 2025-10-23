@@ -54,7 +54,7 @@ const Testimonials = () => {
 
                   {/* Review */}
                   <p className="text-gray-700 text-base md:text-lg leading-relaxed text-center mb-3">
-                    "{review.review}"
+                    {review.review}
                   </p>
 
                   {/* Suggestion */}
