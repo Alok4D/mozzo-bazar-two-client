@@ -27,7 +27,7 @@ const CallUs = () => {
             {/* Call Now Button */}
             <a
               href="tel:+880192345678910"
-              className="inline-block px-6 py-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-semibold rounded-full shadow-lg hover:scale-105 transition-transform duration-300"
+              className="px-8 py-3 bg-gradient-to-r from-yellow-500 via-red-500 to-pink-500 text-white font-semibold rounded-full shadow-lg hover:scale-105 transition-transform duration-300"
             >
               📞 Call Now
             </a>

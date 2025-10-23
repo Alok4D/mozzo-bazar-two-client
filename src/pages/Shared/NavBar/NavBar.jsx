@@ -5,7 +5,6 @@ import useCart from "../../../hooks/useCart";
 import { Link } from "react-router-dom";
 import { FaBars, FaShoppingCart, FaTimes } from "react-icons/fa";
 
-
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false); // mobile dropdown toggle
 
@@ -22,7 +21,7 @@ const NavBar = () => {
   const navOptions = (
     <>
       <li>
-        <Link to="/" className="hover:text-yellow-400 transition" >
+        <Link to="/" className="hover:text-yellow-400 transition">
           Home
         </Link>
       </li>
@@ -58,8 +57,8 @@ const NavBar = () => {
   );
 
   return (
-    <nav className="fixed top-0 z-50 w-full bg-[#ff5200] bg-opacity-90 text-white shadow-lg backdrop-blur-md px-2 lg:px-0 md:px-2">
-      <div className="container mx-auto flex items-center justify-between sm:px-4 lg:px-0 md:px-2 py-3">
+    <nav className="fixed top-0 z-50 w-full bg-[#ff5200] bg-opacity-90 text-white shadow-lg backdrop-blur-md px-2  md:px-2 lg:px-0">
+      <div className="container mx-auto flex items-center justify-between sm:px-4  md:px-2 lg:px-0 py-3">
         {/* Left: Logo */}
         <Link
           to="/"
@@ -107,7 +106,7 @@ const NavBar = () => {
                   <li>
                     <button
                       onClick={handleLogOut}
-                      className="hover:text-red-500 transition"
+                      className="hover:text-yellow-400"
                     >
                       Log Out
                     </button>
@@ -118,7 +117,7 @@ const NavBar = () => {
           ) : (
             <Link
               to="/login"
-              className=" bg-[#ff5200] hover:bg-orange-500 text-white font-semibold px-4 py-2 rounded-md"
+              className=" bg-[#ff5200] hover:bg-orange-600 text-white font-semibold px-5 py-3  rounded-md"
             >
               Login
             </Link>
@@ -135,11 +134,11 @@ const NavBar = () => {
 
             {/* Mobile Dropdown */}
             {isOpen && (
-              <ul className="absolute right-0 mt-3 w-52  bg-black text-white shadow-lg rounded-lg p-4 flex flex-col gap-3">
+              <ul className="absolute right-0 mt-3 w-56 bg-[#ff5200] text-white shadow-lg rounded-lg p-4 flex flex-col gap-3 transition-all duration-300 ease-in-out z-50">
                 {navOptions}
                 {user && (
                   <>
-                    <li className="">
+                    <li className="px-3 py-2 rounded-lg hover:bg-orange-600 hover:text-yellow-100 transition-colors duration-200 cursor-pointer">
                       <Link
                         to={
                           isAdmin
@@ -150,8 +149,13 @@ const NavBar = () => {
                         Dashboard
                       </Link>
                     </li>
-                    <li>
-                      <button onClick={handleLogOut}>Log Out</button>
+                    <li className="px-3 py-2 rounded-lg hover:bg-gray-700 hover:text-red-500 transition-colors duration-200 cursor-pointer">
+                      <button
+                        onClick={handleLogOut}
+                        className="w-full text-left"
+                      >
+                        Log Out
+                      </button>
                     </li>
                   </>
                 )}

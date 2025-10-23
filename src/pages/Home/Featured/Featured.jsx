@@ -6,7 +6,7 @@ import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 
 const Featured = () => {
   return (
-    <section className="featured-item bg-fixed text-white py-10 relative">
+    <section className="featured-item bg-fixed text-white py-10 relative px-2 md:px-4 lg:px-0">
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/70"></div>
 
@@ -37,18 +37,19 @@ const Featured = () => {
               Where Can I Get Some?
             </h3>
             <p className="text-sm md:text-base leading-relaxed text-gray-200">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
-              voluptate facere, deserunt dolores maiores quod nobis quas quasi.
-              Eaque repellat recusandae ad laudantium tempore consequatur
-              consequuntur omnis ullam maxime tenetur.
+              For fresh meals like Salads, Soups, or Sandwiches, local cafes and
+              healthy food restaurants are great options. For Pizza or Burgers,
+              you can check out popular chains or local pizzerias. Desserts like
+              are usually available at bakeries, dessert shops, or even some
+              coffee shops.
             </p>
 
             {/* Button */}
-           <Link to="/order/salad">
-            <button className="px-6 py-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-semibold rounded-full shadow-lg hover:scale-105 transition-transform duration-300">
-              Order Now
-            </button>
-           </Link>
+            <Link to="/order/salad">
+              <button className="px-10 py-3 mt-4 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white font-semibold rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 ">
+                Order Now
+              </button>
+            </Link>
           </div>
         </div>
       </div>

@@ -10,7 +10,7 @@ import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 const ChefRecommends = () => {
   const [menu] = useMenu();
   const [cart, refetch] = useCart();
-  console.log(cart)
+  console.log(cart);
   const salad = menu.filter((item) => item.category === "salad");
   const limitedSalad = salad.slice(0, 3);
 
@@ -18,7 +18,6 @@ const ChefRecommends = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const axiosSecure = useAxiosSecure();
-
 
   const [loadingItemId, setLoadingItemId] = useState(null);
 
@@ -32,7 +31,7 @@ const ChefRecommends = () => {
         price: item.price,
       };
 
-      setLoadingItemId(item._id); 
+      setLoadingItemId(item._id);
 
       axiosSecure
         .post("/carts", cartItem)
@@ -75,7 +74,7 @@ const ChefRecommends = () => {
   };
 
   return (
-    <div className="py-10 bg-gray-50">
+    <div className="py-10 bg-gray-50 px-2 md:px-2 lg:px-0">
       <div className="container mx-auto text-center mb-12">
         <SectionTitle subHeading="Should try" heading="CHEF RECOMMENDS" />
       </div>
