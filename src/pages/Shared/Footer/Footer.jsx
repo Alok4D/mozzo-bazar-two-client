@@ -23,7 +23,7 @@ export default function Footer() {
       }}
     >
       {/* Main Footer */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-10 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-0 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-10 relative z-10">
         {/* Logo + About */}
         <div>
           <h2 className="flex items-center gap-2 text-white text-2xl font-bold mb-4">
@@ -39,7 +39,10 @@ export default function Footer() {
           </p>
           {/* Social Icons */}
           <div className="flex items-center gap-4 text-lg text-white">
-            <a href="#" className="bg-green-600 p-2 rounded-full hover:bg-green-700">
+            <a
+              href="#"
+              className="bg-green-600 p-2 rounded-full hover:bg-green-700"
+            >
               <FaFacebookF />
             </a>
             <a href="#" className="hover:text-green-500">
@@ -57,45 +60,69 @@ export default function Footer() {
         {/* My Account & Helps */}
         <div className="sm:col-span-1 lg:col-span-2 flex flex-col sm:flex-row gap-8">
           <div className="flex-1">
-            <h3 className="text-white font-semibold mb-4 border-b-2 border-green-500 pb-1">
+            <h3 className="text-white font-semibold mb-4 border-b-2 border-green-500 pb-1 w-24">
               My Account
             </h3>
             <ul className="space-y-2 text-sm">
-              <li><a href="#">My Account</a></li>
-              <li><a href="#">Order History</a></li>
-              <li><a href="#">Shopping Cart</a></li>
-              <li><a href="#">Wishlist</a></li>
+              <li>
+                <a href="#">My Account</a>
+              </li>
+              <li>
+                <a href="#">Order History</a>
+              </li>
+              <li>
+                <a href="#">Shopping Cart</a>
+              </li>
+              <li>
+                <a href="#">Wishlist</a>
+              </li>
             </ul>
           </div>
           <div className="flex-1">
-            <h3 className="text-white font-semibold mb-4 border-b-2 border-green-500 pb-1">
+            <h3 className="text-white font-semibold mb-4 border-b-2 border-green-500 pb-1 w-14">
               Helps
             </h3>
             <ul className="space-y-2 text-sm">
-              <li><a href="#">Contact</a></li>
-              <li><a href="#">FAQs</a></li>
-              <li><a href="#">Terms & Condition</a></li>
-              <li><a href="#">Privacy Policy</a></li>
+              <li>
+                <a href="#">Contact</a>
+              </li>
+              <li>
+                <a href="#">FAQs</a>
+              </li>
+              <li>
+                <a href="#">Terms & Condition</a>
+              </li>
+              <li>
+                <a href="#">Privacy Policy</a>
+              </li>
             </ul>
           </div>
         </div>
 
         {/* Proxy */}
         <div>
-          <h3 className="text-white font-semibold mb-4 border-b-2 border-green-500 pb-1">
+          <h3 className="text-white font-semibold mb-4 border-b-2 border-green-500 pb-1 w-14">
             Proxy
           </h3>
           <ul className="space-y-2 text-sm">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Shop</a></li>
-            <li><a href="#">Product</a></li>
-            <li><a href="#">Track Order</a></li>
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Shop</a>
+            </li>
+            <li>
+              <a href="#">Product</a>
+            </li>
+            <li>
+              <a href="#">Track Order</a>
+            </li>
           </ul>
         </div>
 
         {/* Download App */}
         <div>
-          <h3 className="text-white font-semibold mb-4 border-b-2 border-green-500 pb-1">
+          <h3 className="text-white font-semibold mb-4 border-b-2 border-green-500 pb-1 w-44">
             Download Mobile App
           </h3>
           <div className="flex flex-col gap-3">
@@ -128,7 +155,11 @@ export default function Footer() {
             <div className="flex items-center gap-3">
               <FaCcApplePay className="text-2xl" />
               <FaCcVisa className="text-2xl" />
-              <img src={masterCardLogo} alt="Mastercard" className="h-6 w-auto" />
+              <img
+                src={masterCardLogo}
+                alt="Mastercard"
+                className="h-6 w-auto"
+              />
             </div>
             <div className="flex items-center gap-1 border border-gray-500 rounded px-2 py-1 text-xs bg-gray-800">
               <FaLock className="text-green-500" />
